@@ -1,9 +1,15 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
+
 \usepackage{setspace}
 \usepackage{gensymb}
+
 \singlespacing
+
+
 \usepackage[cmex10]{amsmath}
+
 \usepackage{amsthm}
+
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
@@ -11,8 +17,10 @@
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
+
 \usepackage{longtable}
 \usepackage{multirow}
+
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -23,6 +31,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{tkz-euclide}
+
 \usetikzlibrary{calc,math}
 \usepackage{listings}
     \usepackage{color}                                            %%
@@ -35,16 +44,21 @@
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
+
 \DeclareMathOperator*{\Res}{Res}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
+
 \lstset{
 %language=C,
 frame=single, 
@@ -52,6 +66,8 @@ breaklines=true,
 columns=fullflexible
 }
 \begin{document}
+
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -59,6 +75,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
+
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -115,112 +132,116 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 Download all python codes from 
 \begin{lstlisting}
-https://github.com/BOJJAVOYINAANUSHA/tree/main/Assignment-2.py
+https://github.com/BOJJAVOYINAANUSHA/Assignment-2/blob/main/ASSIGNMENT2/assignment2.py
 \end{lstlisting}
 %
 and latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/BOJJAVOYINAANUSHA/tree/main/Assignment-2.tex
+https://github.com/BOJJAVOYINAANUSHA/Assignment-2/blob/main/ASSIGNMENT2/main.tex
 \end{lstlisting}
 %
 \section{Question No. 2.42}
-Construct a ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\angle C = 80 \degree$.
+Construct a quadrilateral ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\angle C = 80 \degree$.
 %
 \section{SOLUTION}
-\ Let us assume vertices of given quadrilateral $ABCD$ as $\vec{A}$,$\vec{B}$,$\vec{C}$ and $\vec{D}$.
-\ Let us generalize the given data:
+\begin{enumerate}
+\item Let us assume vertices of given quadrilateral $ABCD$ as $\vec{A}$,$\vec{B}$,$\vec{C}$ and $\vec{D}$.
+\item Let us generalize the given data:
     \begin{align}
-    &\angle B= 105\degree=\theta 
+    &\angle B= 105\degree=\theta \label{eq1}
     \\
-    &\angle C= 80\degree=\alpha 
+    &\angle C= 80\degree=\alpha
     \\
-    &\norm{\vec{B}-\vec{A}} =4=a, 
+    &\norm{\vec{A}-\vec{B}} =4=a, \label{eq2}
     \\
-    &\norm{\vec{C}-\vec{B}} =5=b, 
+    &\norm{\vec{C}-\vec{B}} =5=b,\label{eq3}
     \\
-    &\norm{\vec{D}-\vec{C}} =6.5=c,
-    \\
-    &\vec{B}=\myvec{0\\0}, \vec{C}=\myvec{5\\0}
+     &\norm{\vec{D}-\vec{C}} =6.5=c,\label{eq4}
     \end{align}
-\ Also, Let us assume the other side is
-\begin{align}
-   &\norm{\vec{D}-\vec{A}} =d 
-\end{align}  
-
-\begin{itemize}
+    \begin{itemize}
 \item For this quadrilateral $ABCD$ we have,
 \begin{align}
-\angle B +\angle C = 105\degree + 80\degree =185\degree,
+\angle B +\angle C = 105\degree + 80\degree =185\degree
 \end{align}
 \item Let, \begin{align}
-\vec{B}= \myvec{0\\0}, \vec{C}= \myvec{5\\0}.
+    &\vec{B}=\myvec{0\\0}, \vec{C}=\myvec{5\\0}.\label{eq5}
 \end{align}
-\item For Finding co-ordinates of A:-
-Now we will use vector equation of a line,
+\item Also, Let us assume the other side is
 \begin{align}
-    \vec{A}= \vec{B}+\lambda a
+ &\norm{\vec{D}-\vec{A}}=d \label{eq5}
+\end{align}  
+ \item For finding coordinates of A:-
+\begin{proof}
+The vector equation of line is given by:
+\begin{align}
+\vec{A}=\vec{B} + \lambda m \label{eq6}
 \end{align}
+\begin{align}
+\norm{\vec{A}-\vec{B}} = \abs{\lambda}\times\norm{\myvec{\cos \theta\\\sin \theta}} 
 \\
+\implies \norm{\vec{A}-\vec{B}}=\abs{\lambda}
+\end{align}
+\item Now using \eqref{eq2} and putting its value in above equation,we get
 \begin{align}
-   \implies \vec{A}= \vec{B}+ \lambda \times \myvec{cos105\degree \\ sin105\degree}
+\implies \abs{\lambda}=a \label{eq7}
+\end{align}
+\end{proof}
+\begin{lemma}
+\label{lemma}
+The coordinate of A can be written as:
+\begin{align}
+&\implies \vec{A}=\myvec{B} +\lambda \myvec{\cos\theta \\\sin \theta } \label{eq8}
+\end{align}
+\end{lemma}
+\item Putting value of $\lambda$=4 in \eqref{eq8} and using \eqref{eq1} we get,
+\begin{align}
+&\implies \vec{A}=\vec{B} +a\myvec{\cos\theta \\\sin \theta }
+\\
+&\implies \vec{A}=\myvec{0\\0} +4\myvec{\cos 105 \degree\\\sin 105 \degree} 
+\\
+&\implies \vec{A}=\myvec{-1.035\\3.863}
+\end{align}
+\item For finding coordinates of D:-
+\begin{proof}
+The vector equation of line is given by:
+\begin{align}
+\vec{D}=\vec{C} + \mu m \label{eq9}
 \end{align}
 \begin{align}
-    \implies {\norm{\vec{A}-\vec{B}}}= \abs{\lambda} \times{\norm{\myvec{-0.258\\0.965}}}
+\norm{\vec{D}-\vec{C}} = \abs{\mu}\times\norm{\myvec{\cos \beta\\\sin \beta}} 
+\\
+\implies \norm{\vec{D}-\vec{C}}=\abs{\mu}
 \end{align}
+\item Now using \eqref{eq4} and putting its value in above equation,we get
 \begin{align}
-   \implies 4= \abs{\lambda} \times 1
+\implies \abs{\mu}=c \label{eq10}
 \end{align}
+\end{proof}
+\begin{lemma}
+\label{lemma}
+The coordinate of D can be written as:
 \begin{align}
-    \implies \lambda = 4
+&\implies \vec{D}=\myvec{C} +\mu \myvec{\cos\beta \\\sin \beta } \label{eq11}
 \end{align}
-\item Now we will calculate the co-ordinates of A,
+\end{lemma}
+\item Putting value of $\mu$=6.5 in \eqref{eq11} and using \eqref{eq5} we get,
 \begin{align}
- \vec{A}= \vec{B}+ 4\myvec{-0.258\\0.965}
- \end{align}
- \begin{align}
-     \implies \vec{A}= \myvec{0\\0}+\myvec{-1.035\\3.863}
- \end{align}
- \begin{align}
-    \implies  \vec{A}= \myvec{-1.035\\3.863}
- \end{align}
-\item For Finding co-ordinates of D:- 
-  Using the vector equation of a line, 
- \begin{align}
-     \vec{D}= \vec{C}+ \lambda m
- \end{align}
- \begin{align}
-     \implies  \vec{D}-\vec{C}= \lambda \times \myvec{cos100\degree\\sin100\degree}
- \end{align}
- \begin{align}
-    \implies {\norm{\vec{D}-\vec{C}}}= \abs{\lambda} \times{\norm{\myvec{-0.173\\0.984}}}
+&\implies \vec{D}=\vec{C} +c\myvec{\cos\beta \\\sin \beta }
+\\
+&\implies \vec{D}=\myvec{5\\0} +6.5\myvec{\cos 100 \degree\\\sin 100 \degree} 
+\\
+&\implies \vec{D}=\myvec{3.871\\6.401}
 \end{align}
+   \item Now,the vertices of given Quadrilateral ABCD can be written as,
 \begin{align}
-   \implies 6.5= \abs{\lambda} \times 1
+ \vec{A}=\myvec{-1.035\\3.863},\vec{B} = \myvec{0\\0}, \vec{C}=\myvec{5\\0},\vec{D}=\myvec{3.871\\6.401}
 \end{align}
-\begin{align}
-    \implies \lambda = 6.5
-\end{align}
-\item Now we will calculate the co-ordinates of D,
-\begin{align}
- \vec{D}= \vec{C}+ \lambda \times \myvec{cos100\degree\\sin100\degree}
- \end{align}
- \begin{align}
-     \implies \vec{D}= \myvec{5\\0}+6.5 \times \myvec{-0.173\\0.984}
- \end{align}
- \begin{align}
-     \implies \vec{D}= \myvec{5\\0}+\myvec{-1.128\\6.401}
- \end{align}
- \begin{align}
-     \vec{D}= \myvec{3.871\\6.401}
- \end{align}
- \ Now, we have the coordinate of vertices A,B,C,D as,
-\begin{align}
-\vec{B}= \myvec{0 \\ 0}, \vec{C}= \myvec{5 \\ 0},  \vec{A}= \myvec{-1.035 \\ 3.863}, \vec{D}= \myvec{3.871 \\ 6.401}.
-\end{align}
-  \ On constructing the given quadilateral on python and marking angle we get:
+    \item On constructing the quadrilateral $ABCD$ we get:
+\end{enumerate}
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
+\centering
 \includegraphics[ width=\columnwidth ,height= 5cm]{ABCDfig.png}
 \caption{Quadrilateral ABCD}
 \label{fig:Quadrilateral ABCD}	
