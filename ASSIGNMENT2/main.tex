@@ -142,7 +142,7 @@ https://github.com/BOJJAVOYINAANUSHA/Assignment-2/blob/main/ASSIGNMENT2/main.tex
 \end{lstlisting}
 %
 \section{Question No. 2.42}
-Construct a quadrilateral ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\angle C = 80 \degree$.
+Construct ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\angle C = 80 \degree$.
 %
 \section{SOLUTION}
 \begin{enumerate}
@@ -151,98 +151,94 @@ Construct a quadrilateral ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \
     \begin{align}
     &\angle B= 105\degree=\theta \label{eq1}
     \\
-    &\angle C= 80\degree=\alpha
+    &\angle C= 80\degree=\alpha \label{eq2}
     \\
-    &\norm{\vec{A}-\vec{B}} =4=a, \label{eq2}
+    &\norm{\vec{A}-\vec{B}} =4=a, \label{eq3}
     \\
-    &\norm{\vec{C}-\vec{B}} =5=b,\label{eq3}
+    &\norm{\vec{C}-\vec{B}} =5=b,\label{eq4}
     \\
-     &\norm{\vec{D}-\vec{C}} =6.5=c,\label{eq4}
+     &\norm{\vec{D}-\vec{C}} =6.5=c,\label{eq5}
     \end{align}
-    \begin{itemize}
+\begin{itemize}
 \item For this quadrilateral $ABCD$ we have,
 \begin{align}
 \angle B +\angle C = 105\degree + 80\degree =185\degree
 \end{align}
 \item Let, \begin{align}
-    &\vec{B}=\myvec{0\\0}, \vec{C}=\myvec{5\\0}.\label{eq5}
+    &\vec{B}=\myvec{0\\0}, \vec{C}=\myvec{5\\0} \label{eq6}
 \end{align}
-\item Also, Let us assume the other side is
+\end{itemize}
+\begin{lemma}
+\label{lemma}
+The coordinate of A and D can be written as follows:
 \begin{align}
- &\norm{\vec{D}-\vec{A}}=d \label{eq5}
-\end{align}  
- \item For finding coordinates of A:-
+\implies \vec{A}=\myvec{B} + a\myvec{\cos\theta \\\sin \theta }
+\\
+\implies \vec{D}=\myvec{C} + c\myvec{\cos \alpha\\\sin \alpha }
+\end{align}
+\end{lemma}
 \begin{proof}
+\begin{itemize}
+\item For finding coordinates of A:-
+\end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{A}=\vec{B} + \lambda m \label{eq6}
+\vec{A}=\vec{B} + \lambda m \label{eq7}
 \end{align}
 \begin{align}
-\norm{\vec{A}-\vec{B}} = \abs{\lambda}\times\norm{\myvec{\cos \theta\\\sin \theta}} 
+\norm{\vec{A}-\vec{B}}= \abs{\lambda}\times\norm{\myvec{\cos \theta\\\sin \theta}} 
 \\
 \implies \norm{\vec{A}-\vec{B}}=\abs{\lambda}
 \end{align}
 \item Now using \eqref{eq2} and putting its value in above equation,we get
 \begin{align}
-\implies \abs{\lambda}=a \label{eq7}
+\implies \abs{\lambda}=a \label{eq8}
 \end{align}
-\end{proof}
-\begin{lemma}
-\label{lemma}
-The coordinate of A can be written as:
-\begin{align}
-&\implies \vec{A}=\myvec{B} +\lambda \myvec{\cos\theta \\\sin \theta } \label{eq8}
-\end{align}
-\end{lemma}
-\item Putting value of $\lambda$=4 in \eqref{eq8} and using \eqref{eq1} we get,
-\begin{align}
-&\implies \vec{A}=\vec{B} +a\myvec{\cos\theta \\\sin \theta }
-\\
-&\implies \vec{A}=\myvec{0\\0} +4\myvec{\cos 105 \degree\\\sin 105 \degree} 
-\\
-&\implies \vec{A}=\myvec{-1.035\\3.863}
-\end{align}
+\begin{itemize}
 \item For finding coordinates of D:-
-\begin{proof}
+\end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{D}=\vec{C} + \mu m \label{eq9}
+\vec{D}=\vec{C} + \mu m \label{eq9} 
 \end{align}
 \begin{align}
 \norm{\vec{D}-\vec{C}} = \abs{\mu}\times\norm{\myvec{\cos \beta\\\sin \beta}} 
 \\
 \implies \norm{\vec{D}-\vec{C}}=\abs{\mu}
 \end{align}
-\item Now using \eqref{eq4} and putting its value in above equation,we get
+\item Now using \eqref{eq5} and putting its value in above equation,we get
 \begin{align}
 \implies \abs{\mu}=c \label{eq10}
 \end{align}
 \end{proof}
-\begin{lemma}
-\label{lemma}
-The coordinate of D can be written as:
+\item Putting value of $\lambda$=4 in \eqref{eq8} and using \eqref{eq1} we get,
 \begin{align}
-&\implies \vec{D}=\myvec{C} +\mu \myvec{\cos\beta \\\sin \beta } \label{eq11}
-\end{align}
-\end{lemma}
-\item Putting value of $\mu$=6.5 in \eqref{eq11} and using \eqref{eq5} we get,
-\begin{align}
-&\implies \vec{D}=\vec{C} +c\myvec{\cos\beta \\\sin \beta }
+&\implies \vec{A}=\vec{B} +a\myvec{\cos\theta \\\sin \theta }
 \\
-&\implies \vec{D}=\myvec{5\\0} +6.5\myvec{\cos 100 \degree\\\sin 100 \degree} 
+&\implies \vec{A}=\myvec{0\\0} +4\myvec{\cos 105 \degree\\\sin 105 \degree} 
 \\
-&\implies \vec{D}=\myvec{3.871\\6.401}
+&\implies \vec{A}=\myvec{-1.03\\3.86}
 \end{align}
-   \item Now,the vertices of given Quadrilateral ABCD can be written as,
+\item Putting value of $\mu$=6.5 in \eqref{eq9} and using \eqref{eq2} we get,
 \begin{align}
- \vec{A}=\myvec{-1.035\\3.863},\vec{B} = \myvec{0\\0}, \vec{C}=\myvec{5\\0},\vec{D}=\myvec{3.871\\6.401}
+&\implies \vec{D}=\vec{C} +c\myvec{\cos\alpha \\\sin \alpha }
+\\
+&\implies \vec{D}=\myvec{5\\0} +6.5\myvec{\cos 80 \degree\\\sin 80 \degree} 
+\\
+&\implies \vec{D}=\myvec{6.12\\6.39}
+\end{align}
+\begin{itemize}
+\item Now,the vertices of given Quadrilateral ABCD can be written as,
+\end{itemize}
+\begin{align}
+ \vec{A}=\myvec{-1.03\\3.86},\vec{B} = \myvec{0\\0}, \vec{C}=\myvec{5\\0},\vec{D}=\myvec{6.12\\6.39}
 \end{align}
     \item On constructing the quadrilateral $ABCD$ we get:
-\end{enumerate}
+\end{enumerate}   
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
 \centering
-\includegraphics[ width=\columnwidth ,height= 5cm]{ABCDfig.png}
+\includegraphics[ width=\columnwidth ,height= 14cm]{FIGURE.png}
 \caption{Quadrilateral ABCD}
 \label{fig:Quadrilateral ABCD}	
 \end{figure}
