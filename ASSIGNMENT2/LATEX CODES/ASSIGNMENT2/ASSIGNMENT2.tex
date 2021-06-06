@@ -153,11 +153,11 @@ Construct ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\an
     \\
     &\angle C= 80\degree=\alpha \label{eq2}
     \\
-    &\norm{\vec{A}-\vec{B}} =4=a, \label{eq3}
+    &\norm{\vec{A}-\vec{B}} =4=p, \label{eq3}
     \\
-    &\norm{\vec{C}-\vec{B}} =5=b,\label{eq4}
+    &\norm{\vec{C}-\vec{B}} =5=q,\label{eq4}
     \\
-     &\norm{\vec{D}-\vec{C}} =6.5=c,\label{eq5}
+     &\norm{\vec{D}-\vec{C}} =6.5=r,\label{eq5}
     \end{align}
 \begin{itemize}
 \item For this quadrilateral $ABCD$ we have,
@@ -172,58 +172,52 @@ Construct ABCD where $AB = 4, BC = 5, CD = 6.5, \angle B = 105 \degree$ and $\an
 \label{lemma}
 The coordinate of A and D can be written as follows:
 \begin{align}
-\implies \vec{A}=\myvec{B} + a\myvec{\cos\theta \\\sin \theta }
+\implies \vec{A}=\vec{B} + \abs{\lambda} \myvec{\cos B \\\sin B } \label{eq a}
 \\
-\implies \vec{D}=\myvec{C} + c\myvec{\cos \alpha\\\sin \alpha }
+\implies \vec{D}=\vec{C} + \abs{\mu} \myvec{\cos C\\\sin C } \label{eq b}
 \end{align}
 \end{lemma}
-\begin{proof}
-\begin{itemize}
 \item For finding coordinates of A:-
-\end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{A}=\vec{B} + \lambda m \label{eq7}
+\vec{A}=\vec{B} + \lambda b \label{eq7}
 \end{align}
 \begin{align}
-\norm{\vec{A}-\vec{B}}= \abs{\lambda}\times\norm{\myvec{\cos \theta\\\sin \theta}} 
+\norm{\vec{A}-\vec{B}}= \abs{\lambda}\times\norm{\myvec{\cos B\\\sin B}} 
 \\
 \implies \norm{\vec{A}-\vec{B}}=\abs{\lambda}
 \end{align}
-\item Now using \eqref{eq2} and putting its value in above equation,we get
+Now using \eqref{eq3} and putting its value in above equation,we get
 \begin{align}
-\implies \abs{\lambda}=a \label{eq8}
+\implies \abs{\lambda}=p \label{eq8}
 \end{align}
-\begin{itemize}
 \item For finding coordinates of D:-
-\end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{D}=\vec{C} + \mu m \label{eq9} 
+\vec{D}=\vec{C} + \mu c \label{eq9} 
 \end{align}
 \begin{align}
-\norm{\vec{D}-\vec{C}} = \abs{\mu}\times\norm{\myvec{\cos \beta\\\sin \beta}} 
+\norm{\vec{D}-\vec{C}} = \abs{\mu}\times\norm{\myvec{\cos C\\\sin C}} 
 \\
 \implies \norm{\vec{D}-\vec{C}}=\abs{\mu}
 \end{align}
-\item Now using \eqref{eq5} and putting its value in above equation,we get
+Now using \eqref{eq5} and putting its value in above equation,we get
 \begin{align}
-\implies \abs{\mu}=c \label{eq10}
+\implies \abs{\mu}=r \label{eq10}
 \end{align}
-\end{proof}
-\item Putting value of $\lambda$=4 in \eqref{eq8} and using \eqref{eq1} we get,
+\item Putting \eqref{eq8} in \eqref{eq a} and using \eqref{eq3} we get,
 \begin{align}
-&\implies \vec{A}=\vec{B} +a\myvec{\cos\theta \\\sin \theta }
+&\implies \vec{A}=\vec{B} +p\myvec{\cos 105 \\\sin 105 }
 \\
-&\implies \vec{A}=\myvec{0\\0} +4\myvec{\cos 105 \degree\\\sin 105 \degree} 
+&\implies \vec{A}=\myvec{0\\0} +4\myvec{-0.25\\0.96} 
 \\
 &\implies \vec{A}=\myvec{-1.03\\3.86}
 \end{align}
-\item Putting value of $\mu$=6.5 in \eqref{eq9} and using \eqref{eq2} we get,
+\item Putting \eqref{eq10} in \eqref{eq b} and using \eqref{eq2} we get,
 \begin{align}
-&\implies \vec{D}=\vec{C} +c\myvec{\cos\alpha \\\sin \alpha }
+&\implies \vec{D}=\vec{C} +r\myvec{\cos 80 \\\sin 80 }
 \\
-&\implies \vec{D}=\myvec{5\\0} +6.5\myvec{\cos 80 \degree\\\sin 80 \degree} 
+&\implies \vec{D}=\myvec{5\\0} +6.5\myvec{0.17\\0.98} 
 \\
 &\implies \vec{D}=\myvec{6.12\\6.39}
 \end{align}
